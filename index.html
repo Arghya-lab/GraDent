@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GraDent</title>
+    <!-- style -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- google font -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  </head>
+  <body>
+    <h1>GraDent</h1>
+    <div class="container">
+      <div class="color-container">
+        <input
+          class="color-picker"
+          type="color"
+          name="start"
+          id="first"
+          value="#000000" />
+        <p class="first-value value"></p>
+      </div>
+      <div class="color-container">
+        <input
+          class="color-picker"
+          type="color"
+          name="end"
+          id="second"
+          value="#000000" />
+        <p class="second-value value"> </p>
+      </div>
+    </div>
+    <div id="arrows">
+      <button>
+        <span id="right top" class="material-symbols-outlined">
+          north_east
+        </span>
+      </button>
+      <button>
+        <span id="right" class="material-symbols-outlined"> east </span>
+      </button>
+      <button>
+        <span id="right bottom" class="material-symbols-outlined">
+          south_east
+        </span>
+      </button>
+      <button>
+        <span id="bottom" class="material-symbols-outlined"> south </span>
+      </button>
+      <button>
+        <span id="left bottom" class="material-symbols-outlined">
+          south_west
+        </span>
+      </button>
+      <button>
+        <span id="left" class="material-symbols-outlined"> west </span>
+      </button>
+      <button>
+        <span id="left top" class="material-symbols-outlined">
+          north_west
+        </span>
+      </button>
+      <button>
+        <span id="top" class="material-symbols-outlined"> north </span>
+      </button>
+    </div>
+    <div class="randomBtn-container">
+      <button class="button">
+        <span class="button-content">random</span>
+      </button>
+      <button class="button copy-css">
+        <span class="button-content">copy CSS</span>
+      </button>
+    </div>
+
+    <!-- javascript -->
+    <script src="script.js"></script>
+  </body>
+</html>

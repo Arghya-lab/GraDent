@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;1,700&family=Roboto&display=swap");
+
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+  /* border: 1px solid red; */
+}
+
+body {
+  height: 100vh;
+  /* background-image: linear-gradient(to right, #051937, #004d7a, #008793, #00bf72, #a8eb12); */
+}
+
+h1 {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 3rem;
+  font-family: sans-serif;
+  color: rgb(213, 213, 213);
+  animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+ @keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+  }
+  
+
+.container {
+  /* border: 2px solid violet; */
+  display: flex;
+  justify-content: space-between;
+  padding: 8rem 4rem 2rem;
+
+  max-width: 500px;
+  margin: auto;
+}
+
+.color-container {
+  /* border: 2px solid red; */
+  text-align: center;
+}
+
+.color-picker {
+  background: transparent;
+  border: transparent;
+  margin: 0.25rem 2rem;
+  border-radius: 0.33rem;
+  display: block;
+}
+
+.value {
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(
+      82.3deg,
+      rgba(150, 93, 233, 1) 10.8%,
+      rgba(99, 88, 238, 1) 94.3%
+    );
+  color: rgb(213, 213, 213);
+  display: inline-block;
+  padding: 0.2em 0.5em;
+  border-radius: 0.4rem;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+#arrows {
+  max-width: 500px;
+  padding: 0 4rem 4rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+#arrows button {
+  /* border: 1px solid brown; */
+  background: transparent;
+  margin: 0.1em;
+  padding: 0.1em 0.25em;
+  border-radius: 0.5em;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+#arrows button :active {
+    animation: vibrate 0.3s linear infinite both;
+}
+
+ @keyframes vibrate {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-2px, 2px);
+    }
+    40% {
+      transform: translate(-2px, -2px);
+    }
+    60% {
+      transform: translate(2px, 2px);
+    }
+    80% {
+      transform: translate(2px, -2px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+  
+  
+
+.material-symbols-rounded {
+  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 24;
+}
+
+.randomBtn-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    margin: auto;
+    max-width: max-content;
+}
+
+.button {
+    text-transform: capitalize;
+    position: relative;
+    overflow: hidden;
+    height: 2rem;
+    width: 6rem;
+    padding: 0 1rem;
+    border-radius: .4rem;
+    background: #3d3a4e;
+    background-size: 400%;
+    color: #fff;
+    border: none;
+  }
+  
+  .button:hover::before {
+    transform: scaleX(1);
+}
+
+.button:hover {
+      cursor: pointer;
+  }
+  
+  .button-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(
+      82.3deg,
+      rgba(150, 93, 233, 1) 10.8%,
+      rgba(99, 88, 238, 1) 94.3%
+    );
+    transition: all 0.475s;
+  }
